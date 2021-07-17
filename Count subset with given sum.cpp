@@ -5,8 +5,8 @@ int solve(vector<int>&arr,int n,int sum)
     {
         if(sum==0)
             return 1;
-        if(sum<0)
-            return 0;
+        if(sum<arr[n])
+            return solve(arr,n-1,sum);
         if(n<0)
             return 0;
             
